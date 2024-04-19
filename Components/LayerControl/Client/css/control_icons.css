@@ -1,0 +1,74 @@
+.tools {
+    background-image: url(../Icons/tools.png) !important;
+}
+.layer_control {
+    background-image: url(../Icons/layer_control.png) !important;
+}
+.only_select{
+    background-image: url(../Icons/only_select.png) !important;
+}
+.all_select{
+    background-image: url(../Icons/all_select.png) !important;
+}
+.zoom_layer{
+    background-image: url(../Icons/zoom_layer.png) !important;
+}
+.rename_layer {
+    background-image: url(../Icons/rename_layer.png) !important;
+}
+.transparency{
+    background-image: url(../Icons/transparency.png) !important;
+}
+.up_layer{
+    background-image: url(../Icons/up.png) !important;
+}
+.down_layer{
+    background-image: url(../Icons/down.png) !important;
+}
+.duplicate_layer{
+    background-image: url(../Icons/duplicate.png) !important;
+}
+.color_layer{
+    background-image: url(../Icons/color.png) !important;
+}
+.underline_layer{
+    background-image: url(../Icons/underline.png) !important;
+}
+.layer_control{
+    background-image: url(../Icons/layer_control.png) !important;
+}
+.delete_layer{
+    background-image: url(../Icons/delete_layer.png) !important;
+}
+.delete_class{
+    background-image: url(../Icons/delete_class.png) !important;
+}
+.loading_layer{
+    background-image: url(../Icons/loading.gif) !important;
+}
+.delete_element{
+    background-image: url(../Icons/element-delete.png) !important;
+}
+.properties{
+    background-image: url(../Icons/detail.png) !important;
+}
+.group{
+    background-image: url(../Icons/group.png) !important;
+}
+.ungroup{
+    background-image: url(../Icons/ungroup.png) !important;
+}
+
+.legend_sort{
+    background-image: url(../Icons/legend-sort.png) !important;
+}
+.add_group{
+    background-image: url(../Icons/layer-group-add.png) !important;
+}
+.del_group{
+    background-image: url(../Icons/layer-group-del.png) !important;
+}
+
+.thematic_node{
+    background-image: url(../Icons/node_tematic_map.png) !important;
+}

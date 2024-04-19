@@ -1,0 +1,141 @@
+SYMBOLSET
+SYMBOL
+    NAME "circle" 
+    TYPE ellipse 
+    FILLED true 
+    POINTS 1 1 END 
+END
+
+SYMBOL
+   NAME "Talud"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Area_Inundacion.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+   NAME "Contra_Talud"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Contra_Talud.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+   NAME "Maleza"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Maleza_compacta_con_espinas.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+   NAME "Cultivada"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Cultivada.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+   NAME "Pasto"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Pasto.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+   NAME "Balastro_arena_y_piedra"
+   TYPE PIXMAP
+   IMAGE "Imagenes/Balastro.png"
+   TRANSPARENT 50
+END
+
+SYMBOL
+  NAME "alcantarilla"
+  TYPE vector
+  POINTS
+   0 1
+   0.5 0.5
+   0 0
+   0.5 0.5
+   1 0.5
+   1.5 0
+   1 0.5
+   1.5 1
+  END
+END
+
+SYMBOL
+  NAME "paso_nivel"
+  TYPE vector
+  POINTS
+   0 1
+   0.5 0.5
+   0 0
+   0.5 0.5   
+   1 1
+   0.5 0.5
+   1 0
+   0.5 0.5
+   0.5 1
+   0.5 1.5
+   0.25 1.5
+   0.75 1.5
+  END
+END
+
+SYMBOL
+  NAME "paso_nivel_1"
+  TYPE vector
+  POINTS   
+   0.5 0.5
+   0.5 -0.5
+  END
+END
+
+SYMBOL
+  NAME "puentes"
+  TYPE vector
+  POINTS   
+    0 1
+    0.2 0.7
+    1.2 0.7
+    1.5 1
+    -99 -99
+    0 0
+    0.2 0.3
+    1.2 0.3
+    1.5 0
+  END
+END
+
+SYMBOL
+   NAME "senal"
+   TYPE VECTOR
+   POINTS
+		0 0
+		0 1
+		1 1
+		1 0
+		0 0
+                -99 -99
+                0.5 1
+                0.5 1.5
+                1 1.5
+   END
+   FILLED FALSE
+END
+
+SYMBOL
+   NAME "senal_up"
+   TYPE VECTOR
+   POINTS
+		0 0
+		0 1
+		1 1
+		1 0
+		0 0
+                -99 -99
+                0.5 1
+                0.5 1.5
+   END
+   FILLED true
+END

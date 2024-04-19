@@ -1,0 +1,39 @@
+/*
+ * Ext JS Library 3.0 Pre-alpha
+ * Copyright(c) 2006-2008, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */
+/*
+#custom-slider .x-slider-vert {
+    padding-top:7px;
+    background:transparent no-repeat -44px 0;
+    width:22px;
+}
+
+#custom-slider .x-slider-vert .x-slider-end {
+    padding-bottom:7px;
+    zoom:1;
+    background:transparent no-repeat -22px bottom;
+}
+
+#custom-slider .x-slider-vert .x-slider-inner {
+    background:transparent repeat-y 0 0;
+}
+ */
+#custom-slider .x-slider-thumb {
+    background-image:url(../Icons/slider-thumbs.png);
+}
+/*
+#custom-slider .x-slider-vert, .x-slider-vert .x-slider-end, .x-slider-vert .x-slider-inner {
+    background-image:url(../Icons/slider-bg.png);
+}
+*/
+.ref_up{
+    background-image: url(../Icons/ref_scale_up.png) !important;
+}
+
+.ref_down{
+    background-image: url(../Icons/ref_scale_down.png) !important;
+}

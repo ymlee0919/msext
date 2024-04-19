@@ -1,0 +1,482 @@
+MAP
+  EXTENT -84.953125 19.8257675170898 -74.1316146850586 23.2760314941406
+  FONTSET "../../Fonts/fonts.txt"
+  IMAGECOLOR 255 255 255
+  IMAGETYPE png
+  SYMBOLSET "../../Symbols/symbols.txt"
+  SHAPEPATH "../../Shapes"
+  SIZE 727 440
+  STATUS ON
+  UNITS DD
+  NAME "Cuba"
+
+  OUTPUTFORMAT
+    NAME "png"
+    MIMETYPE "image/png"
+    DRIVER "GD/PNG"
+    EXTENSION "png"
+    IMAGEMODE "PC256"
+    TRANSPARENT FALSE
+    FORMATOPTION "INTERLACE=OFF"
+  END
+
+	PROJECTION    
+		'proj=longlat' 
+		'datum=NAD27' 
+		'no_defs'
+	END
+  
+  LEGEND
+    IMAGECOLOR 255 255 255
+    KEYSIZE 20 15
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      TYPE BITMAP
+      BUFFER 0
+      COLOR 0 0 0
+      FORCE FALSE
+      MINDISTANCE -1
+      MINFEATURESIZE -1
+      OFFSET 0 0
+      PARTIALS TRUE
+    END
+    POSITION LL
+    STATUS OFF
+  END
+
+  QUERYMAP
+    COLOR 255 255 0
+    SIZE -1 -1
+    STATUS OFF
+    STYLE HILITE
+  END
+
+  REFERENCE
+    COLOR -1 -1 -1
+    EXTENT -84.9521 19.8266 -74.1311 23.2055
+    IMAGE "D:/ms4w/Apache/htdocs/SigWebDev/Map/Generated/Ref/ref_024421cc4d_02.01.04.08.18.49.png"
+    OUTLINECOLOR 200 0 0
+    SIZE 224 150
+    STATUS ON
+      MARKER 0
+      MARKERSIZE 0
+      MINBOXSIZE 3
+      MAXBOXSIZE 0
+  END
+
+  SCALEBAR
+    ALIGN CENTER
+    COLOR 0 0 0
+    IMAGECOLOR 255 255 255
+    INTERVALS 4
+    LABEL
+      SIZE MEDIUM
+      TYPE BITMAP
+      BUFFER 0
+      COLOR 0 0 0
+      FORCE FALSE
+      MINDISTANCE -1
+      MINFEATURESIZE -1
+      OFFSET 0 0
+      PARTIALS TRUE
+    END
+    OUTLINECOLOR 255 10 10
+    POSITION LR
+    SIZE 200 3
+    STATUS ON
+    STYLE 0
+    TRANSPARENT TRUE
+    UNITS KILOMETERS
+  END
+
+  WEB
+    IMAGEPATH "/ms4w/Apache/htdocs/SigWebDev/Map/Generated/Img"
+    IMAGEURL "../../Generated/Img"
+    MAXSCALEDENOM 40000
+    MINSCALEDENOM 1000
+    QUERYFORMAT text/html
+    LEGENDFORMAT text/html
+    BROWSEFORMAT text/html
+  END
+
+  
+  
+  LAYER    
+    DATA "caribe"
+    NAME "Caribe"
+    STATUS ON
+    TEMPLATE "ttt"
+    MAXSCALE 100000000
+    MINSCALE 1000000
+    TYPE POLYGON
+    OPACITY 60
+    UNITS DD
+	PROJECTION    
+		'proj=longlat' 
+		'datum=NAD27' 
+		'no_defs'
+    END
+    CLASS
+      NAME "Caribe"
+      STYLE        
+        COLOR 213 212 127       
+        OUTLINECOLOR 0 0 0 
+        SYMBOL 0
+      END
+    END
+  END
+  
+  LAYER
+    NAME 'Provincias'
+    TYPE POLYGON
+    DUMP true
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    DATA 'provincias'
+    STATUS ON
+	METADATA
+      "THEMATICS"	"0"
+    END
+    TRANSPARENCY 100
+    PROJECTION    
+		'proj=longlat' 
+		'datum=NAD27' 
+		'no_defs'
+    END
+	MAXSCALEDENOM 100000000
+	MINSCALEDENOM 500000
+    LABELITEM 'PROVINCIA'
+	LABELMAXSCALEDENOM 2000000
+	LABELMINSCALEDENOM 500000
+    CLASS
+      NAME "PROVINCIA" 
+       STYLE
+	     MAXSCALEDENOM 100000000
+		 MINSCALEDENOM 500000
+         OUTLINECOLOR 0 0 0
+         COLOR 29 210 157
+       END
+	   STYLE
+	     MAXSCALEDENOM 500000
+		 MINSCALEDENOM 1
+         OUTLINECOLOR 0 0 0
+         COLOR -1 -1 -1
+       END
+     LABEL 
+      TYPE truetype
+	  FONT 'arial'
+      SIZE 9
+      COLOR 0 0 0
+      ANGLE 0
+      POSITION cc
+      FORCE true
+      ANTIALIAS true
+      PARTIALS true
+     END 
+    END
+  END
+  
+  LAYER
+    NAME 'municipios'
+    TYPE POLYGON
+    TEMPLATE ttt
+    DATA 'dpa/municipios.shp'
+    METADATA
+      'ows_title' 'municipios'
+    END
+    STATUS ON
+    TRANSPARENCY 100
+    PROJECTION
+    'proj=longlat'
+    'datum=NAD27'
+    'no_defs'
+    END
+	MAXSCALEDENOM 750000
+	MINSCALEDENOM 0
+	LABELMAXSCALEDENOM 750000
+	LABELMINSCALEDENOM 50000
+	LABELITEM 'NOMBRE'
+    CLASS
+       NAME 'municipios' 
+       STYLE
+         WIDTH 0.91 
+         OUTLINECOLOR 0 0 0
+         COLOR 220 220 220
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE 0
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  PARTIALS true
+  	   END 
+    END
+  END
+  
+  LAYER
+    NAME 'Vias'
+    TYPE LINE
+    TEMPLATE ttt
+    CONNECTIONTYPE postgis
+    CONNECTION "dbname='osm' host=localhost port=5432 user='postgres' password='postgres'"
+    DATA 'the_geom FROM ( SELECT * FROM vial ORDER BY clazz DESC) as red_vial USING UNIQUE gid USING srid=4326'
+    STATUS ON
+	METADATA
+      "THEMATICS"	"11"
+    END
+	MAXSCALEDENOM 500000
+	MINSCALEDENOM 0
+	LABELMAXSCALEDENOM 15000
+	LABELMINSCALEDENOM 100
+    PROJECTION
+    'proj=longlat'
+    'datum=NAD27'
+    'no_defs'
+    END
+    CLASSITEM 'clazz'
+	LABELITEM 'osm_name'
+	CLASS
+      NAME "Primaria"
+      EXPRESSION "15" 
+       STYLE
+         WIDTH 5.5
+         COLOR 201 201 201
+       END
+	   STYLE
+         WIDTH 5 
+         COLOR 219 112 147
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE AUTO
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  MINDISTANCE 200
+		  PARTIALS false
+		  MAXSCALEDENOM 25000
+		  MINSCALEDENOM 0
+  	   END 
+    END
+    CLASS
+      NAME "Autopista"
+      EXPRESSION "11" 
+	  STYLE
+         WIDTH 4.5
+         COLOR 201 201 201
+       END
+       STYLE
+         WIDTH 4
+         COLOR 223 246 7
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE AUTO
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  MINDISTANCE 200
+		  PARTIALS false
+		  MAXSCALEDENOM 25000
+		  MINSCALEDENOM 0
+  	   END
+    END
+    CLASS
+      NAME "Enlace autopista" 
+      EXPRESSION "12" 
+	   STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 124 207 76
+       END
+    END
+    CLASS
+      NAME "Trunk" 
+      EXPRESSION "13" 
+	   STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 49 188 30
+       END
+    END
+    CLASS
+      NAME "Trunk link" 
+      EXPRESSION "14" 
+	   STYLE
+		 MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 87 202 223
+       END
+    END
+    CLASS
+      NAME "Enlace primario" 
+      EXPRESSION "16" 
+	   STYLE
+		 MAXSCALEDENOM 75000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END
+       STYLE
+		 MAXSCALEDENOM 75000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 255 29 59
+       END
+    END
+    CLASS
+      NAME "Secundaria"
+      EXPRESSION "21" 
+	   STYLE
+		 MAXSCALEDENOM 75000
+		 MINSCALEDENOM 0
+         WIDTH 5.5
+         COLOR 201 201 201
+       END
+       STYLE
+		 MAXSCALEDENOM 75000
+		 MINSCALEDENOM 0
+         WIDTH 5 
+         COLOR 255 221 170
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE AUTO
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  MINDISTANCE 200
+		  PARTIALS false
+		  MAXSCALEDENOM 20000
+		  MINSCALEDENOM 0
+  	   END
+    END
+    CLASS
+      NAME "Tercera"
+      EXPRESSION "31"
+		STYLE
+		 MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 4.5
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 4
+         COLOR 238 230 133
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE AUTO
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  MINDISTANCE 200
+		  PARTIALS false
+		  MAXSCALEDENOM 10000
+		  MINSCALEDENOM 0
+  	   END
+    END
+    CLASS
+      NAME "Residencial"
+      EXPRESSION "32" 
+	   STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 4
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5 
+         COLOR 255 255 255
+       END
+	   LABEL 
+		  FONT arial
+		  TYPE truetype
+		  SIZE 9
+		  COLOR 0 0 0
+		  ANGLE AUTO
+		  POSITION cc
+		  FORCE false
+		  ANTIALIAS true
+		  MINDISTANCE 200
+		  PARTIALS false
+		  MAXSCALEDENOM 10000
+		  MINSCALEDENOM 0
+  	   END
+    END
+    CLASS
+      NAME "Road"
+      EXPRESSION "41"
+		STYLE
+		 MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END	  
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 68 160 122
+       END
+    END
+    CLASS
+      NAME "No clasificado"
+      EXPRESSION "42" 
+	   STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3.5
+         COLOR 201 201 201
+       END
+       STYLE
+	     MAXSCALEDENOM 25000
+		 MINSCALEDENOM 0
+         WIDTH 3 
+         COLOR 118 112 152
+       END
+    END
+  END
+
+END

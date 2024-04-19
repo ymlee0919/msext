@@ -1,0 +1,15 @@
+.query_point{
+    background-image: url(../Icons/query_by_point.png) !important;
+}
+.query_rect{
+    background-image: url(../Icons/query_by_rect.png) !important;
+}
+.query_circle{
+    background-image: url(../Icons/query_by_circle.png) !important;
+}
+.query_poly{
+    background-image: url(../Icons/query_by_poly.png) !important;
+}
+.under_highlight{
+    background-image: url(../Icons/under_highlight.png) !important;
+}

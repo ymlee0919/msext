@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<config>
+<security source="PostgresSQL"/>
+<menu>
+	<order>
+		<menu_item name="Archivo"/>
+		<menu_item name="Ver"/>
+		<menu_item name="Navegación"/>
+		<menu_item name="Capas"/>
+		<menu_item name="Información"/>
+		<menu_item name="Herramientas"/>
+		<menu_item name="Selección"/>
+		<menu_item name="Actualizar"/>
+	</order>
+</menu>
+<plugins>
+	<order>
+	<!--
+		<plugin_item name="TematicMap"/>
+		<plugin_item name="ScaleBar"/>
+		<plugin_item name="AddPostgisLayer"/>
+		<plugin_item name="AddShapeLayer"/>
+		<plugin_item name="LoadShapeLayer"/>
+		<plugin_item name="ExpLayerPostgis"/>
+		<plugin_item name="LabeledLayer"/>
+		<plugin_item name="LocateByPoint"/>
+		<plugin_item name="LocateByLeaf"/>
+		<plugin_item name="SearchMap"/>
+		<plugin_item name="Query"/>
+		<plugin_item name="Select"/>
+		<plugin_item name="CleanSelection"/>
+		<plugin_item name="UpdateLayer"/>
+		<plugin_item name="PrintMap"/>
+		<plugin_item name="MapManagment"/>
+		<plugin_item name="Tester"/>
+	-->
+	</order>
+
+	<plugin name="AddPostgisLayer">
+		<js>postgis_layer.js</js>
+		<css>postgis_layer_icons.css</css>
+		<desc>Adiciona una capa a postgis al mapa</desc>
+	</plugin>
+
+	<plugin name="ExpLayerPostgis">
+		<js>export_layer.js</js>
+		<css>export_layer_icons.css</css>
+		<desc>Exporta una capa shape del mapa postgis</desc>
+	</plugin>
+
+	<plugin name="Query">
+		<js>query.js,query_by_point.js,query_by_rect.js,query_by_circle.js,query_by_polygon.js</js>
+		<css>query_icons.css</css>
+		<desc>Pide información a una capa del mapa</desc>
+	</plugin>
+
+	<plugin name="AddShapeLayer">
+		<js>shape_upload.js</js>
+		<css>shape_icons.css</css>
+		<desc>Importa archivos Shape</desc>
+	</plugin>
+
+	<plugin name="TematicMap">
+		<js>tematic_map.js</js>
+		<css>tematic_map.css</css>
+		<desc>Permite crear mapas tematicos</desc>
+	</plugin>
+
+	<plugin name="PrintMap">
+		<js>print_map.js</js>
+		<css>print_map_icons.css</css>
+		<desc>Permite exportar un mapa a formato PDF</desc>
+	</plugin>
+
+	<plugin name="SearchMap">
+		<js>search_in_map.js</js>
+		<css>search_map_icons.css</css>
+		<desc>Permite realizar busquedas por atributos en el mapa</desc>
+	</plugin>
+
+	<plugin name="LocateByPoint">
+		<js>locateByPoint.js</js>
+		<css>locateByPoint.css</css>
+		<desc>Localiza un punto en el mapa dadas las coordenadas del mismo</desc>
+	</plugin>
+	
+	<plugin name="LocateByLeaf">
+		<js>locateByLeaf.js</js>
+		<css>locateByLeaf.css</css>
+		<desc>Centra en el mapa dado una hoja 25000</desc>
+	</plugin>
+
+	<plugin name="Select">
+		<js>selection.js,selection_by_point.js,selection_by_rect.js,selection_by_circle.js,selection_by_poly.js,selection_by_polyline.js</js>
+		<css>selection_icons.css</css>
+		<desc>Permite crear listas de seleccion a traves del mapa</desc>
+	</plugin>
+
+	<plugin name="CleanSelection">
+		<js>CleanSelection.js</js>
+		<css>0</css>
+		<desc>Permite limpiar la seleccion realizada</desc>
+	</plugin>
+
+	<plugin name="UpdateLayer">
+		<js>update_layer.js</js>
+		<css>update_layer.css</css>
+		<desc>Actualiza los campos literales asociados a una geometria</desc>
+	</plugin>
+
+	<plugin name="LabeledLayer">
+		<js>labeledLayer.js</js>
+		<css>LabeledLayer.css</css>
+		<desc>Permite crear el etiquetado de una capa por uno de sus atributos literales</desc>
+	</plugin>
+
+	<plugin name="ScaleBar">
+		<js>scaleBar.js</js>
+		<css>scaleBar.css</css>
+		<desc>Permite configurar la barra de escala del mapa</desc>
+	</plugin>
+
+	<plugin name="LoadShapeLayer">
+		<js>load_shape_layer.js</js>
+		<css>load_shape_icons.css</css>
+		<desc>Adiciona una capa a desde archivos shape al mapa</desc>
+	</plugin>
+	
+	<plugin name="MapManagment">
+		<js>map_managment.js</js>
+		<css>map_managment.css</css>
+		<desc>Permite gestionar los mapas de los usuarios</desc>
+	</plugin>
+
+	<plugin name="Tester">
+		<js>tester.js</js>
+		<css>0</css>
+		<desc>Confeccion superponibles</desc>
+	</plugin>
+</plugins>
+</config>

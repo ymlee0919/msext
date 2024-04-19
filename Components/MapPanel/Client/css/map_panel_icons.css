@@ -1,0 +1,60 @@
+.zoom_in{
+    background-image: url(../Icons/zoom_in.png) !important;
+}
+.zoom_out {
+    background-image: url(../Icons/zoom_out.png) !important;
+}
+.zoom_alejar{
+    background-image: url(../Icons/zoom_alejar.png) !important;
+}
+.zoom_acercar {
+    background-image: url(../Icons/zoom_acercar.png) !important;
+}
+.pan {
+    background-image: url(../Icons/pan.png) !important;
+}
+.full_ext {
+    background-image: url(../Icons/zoom_extent.png) !important;
+}
+.distance{
+    background-image: url(../Icons/length-measure.png) !important;
+}
+.surface {
+    background-image: url(../Icons/area-measure.png) !important;
+}
+.reference{
+    background-image: url(../Icons/panel_reference.png) !important;
+}
+.measure{
+    background-image: url(../Icons/measure.png) !important;
+}
+.scalebar_off{
+    background-image: url(../Icons/scale_bar_off.png) !important;
+}
+.scalebar_on{
+    background-image: url(../Icons/scale_bar_on.png) !important;
+}
+.menu_off{
+    background-image: url(../Icons/menu_off.png) !important;
+}
+.menu_on{
+    background-image: url(../Icons/menu_on.png) !important;
+}
+.navigate_on{
+    background-image: url(../Icons/navigate_on.png) !important;
+}
+.navigate_off{
+    background-image: url(../Icons/navigate_off.png) !important;
+}
+.next{
+    background-image: url(../Icons/zoom-next.png) !important;
+}
+.back{
+    background-image: url(../Icons/zoom-back.png) !important;
+}
+.menu_next{
+    background-image: url(../Icons/menu_next.png) !important;
+}
+.menu_back{
+    background-image: url(../Icons/menu_back.png) !important;
+}

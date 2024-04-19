@@ -1,0 +1,49 @@
+.plugins_manager{
+    background-image: url(../Icons/plugins_manager.png) !important;
+}
+.logo{
+    background-image: url(../Icons/MsExt.png) !important;
+}
+.load{
+    background-image: url(../Icons/load.png) !important;
+}
+.reload{
+    background-image: url(../Icons/reload.png) !important;
+}
+.cancel_reload{
+    background-image: url(../Icons/cancel.png) !important;
+}
+.icon-expand-all {
+    background-image: url(../Icons/expand-all.gif) !important;
+}
+.icon-collapse-all {
+    background-image: url(../Icons/collapse-all.gif) !important;
+}
+
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:300px;
+    z-index:20000;
+}
+#msg-div .msg {
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #F6F6F6;
+    border: 2px solid #ccc;
+    margin-top: 2px;
+    padding: 10px 15px;
+    color: #555;
+}
+#msg-div .msg h3 {
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#msg-div .msg p {
+    margin: 0;
+}

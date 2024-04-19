@@ -1,0 +1,15 @@
+.bt_add_all{
+    background-image: url(../Icons/add.gif) !important;
+}
+.bt_remove_all{
+    background-image: url(../Icons/delete_all.png) !important;
+}
+.bt_remove{
+    background-image: url(../Icons/delete.gif) !important;
+}
+.tematic_map{
+    background-image: url(../Icons/tematic_map.png) !important;
+}
+.under_tematic_map{
+    background-image: url(../Icons/under_tematic_map.png) !important;
+}

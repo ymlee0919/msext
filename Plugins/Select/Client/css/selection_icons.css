@@ -1,0 +1,18 @@
+.selection_by_point{
+    background-image: url(../Icons/selection_by_point.png) !important;
+}
+.selection_by_rect{
+    background-image: url(../Icons/selection_by_rect.png) !important;
+}
+.selection_by_circle{
+    background-image: url(../Icons/selection_by_circle.png) !important;
+}
+.selection_by_poly{
+    background-image: url(../Icons/selection_by_poly.png) !important;
+}
+.selection_by_polyline{
+    background-image: url(../Icons/selection_by_polyline.png) !important;
+}
+.unmark_selection{
+    background-image: url(../Icons/unmark_selection.png) !important;
+}
